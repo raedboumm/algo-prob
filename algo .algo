@@ -1,0 +1,63 @@
+ALGORITHM choix
+VAR
+    tab1: ARRAY_OF INTEGER[n];
+    tab2: ARRAY_OF INTEGER[m];
+    n, m,sum,c,:INTEGER
+    x:=0 INTEGER
+    h:=0 INTEGER
+
+
+
+BEGIN
+    write("tab1")
+    read(n)
+    write("tab2")
+    read(m)
+    FOR i FROM 0 TO n-1 STEP step  DO
+        read(tab1[i])
+    END_FOR
+    FOR i FROM 0 TO m-1 STEP step  DO
+        read(tab2[i])
+    END_FOR
+
+
+       
+   FOR i FROM 0 TO n-1 STEP step  DO
+    FOR j FROM 0 TO m-1 STEP step  DO
+        IF (tab1[i]<>tab2[j]) THEN
+            c=c+1
+            END_IF
+            IF (c=m) THEN
+               x=x+tab1[i]
+            END_IF
+END_FOR
+        END_FOR
+    
+   FOR j FROM 0 TO m-1 STEP step  DO
+    FOR i FROM 0 TO n-1 STEP step  DO
+        IF (tab2[j]<>tab1[i]) THEN
+            c=c+1
+          
+            END_IF
+            IF (c=n) THEN
+               x=x+tab2[i]
+            END_IF
+END_FOR
+        END_FOR
+        write("result:",x)
+
+
+
+END
+
+
+
+
+
+
+
+
+
+
+
+

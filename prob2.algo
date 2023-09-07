@@ -1,0 +1,55 @@
+PROCEDURE dot_product(v1,v2,VAR ps)
+VAR
+    v1: ARRAY_OF INTEGER[n];
+    v2: ARRAY_OF INTEGER[n];
+    
+BEGIN
+    FOR i FROM 0 TO n-1 STEP step  DO
+    ps=v1[i]*v2[i]
+    END_FOR
+END
+
+
+
+ALGORITHM scalar
+VAR
+    ps: INTEGER := 0
+BEGIN
+
+    dot_product([v1],[])
+    write (ps)
+    IF (ps==0) THEN
+        write("orthogonal")
+    ELSE
+        write("non orthogonal")
+    END_IF
+END
+
+
+FUNCTION dot_product(v1,v2) : INTEGER
+VAR
+    ps:INTEGER
+    
+BEGIN
+  FOR i FROM 0 TO n-1 STEP 1  DO
+    ps=v1[i]*v2[i]
+    END_FOR
+    
+    RETURN ps ;
+END
+
+
+
+
+ALGORITHM scalar
+VAR
+    ps: INTEGER := 0
+BEGIN
+
+   write(dot_product)
+    IF (ps==0) THEN
+        write("orthogonal")
+    ELSE
+        write("non orthogonal")
+    END_IF
+END
